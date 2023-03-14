@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="ModuleOneTest(failed)">
+    <classes>
+      <class name="parallelScripts.SampleThreeTest">
+        <methods>
+          <include name="start"/>
+          <include name="testTwo"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- parallelScripts.SampleThreeTest -->
+      <class name="parallelScripts.SampleTwoTest">
+        <methods>
+          <include name="testTwo"/>
+          <include name="close"/>
+          <include name="start"/>
+          <include name="testThree"/>
+        </methods>
+      </class> <!-- parallelScripts.SampleTwoTest -->
+    </classes>
+  </test> <!-- ModuleOneTest(failed) -->
+</suite> <!-- Failed suite [SampleSuite] -->
